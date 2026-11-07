@@ -1,0 +1,44 @@
+{
+    "name": "prestashopheaven/runtime-shared-kernel",
+    "description": "Value objects every PrestaHaven module shares, in pure PHP without PrestaShop: the shop constraint (one shop, a shop group or all shops). The only package the Domain layer of a module may use (PKG-09).",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "George van Engers",
+            "email": "vanengers@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "PrestaShopHeaven\\Runtime\\SharedKernel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PrestaShopHeaven\\Runtime\\SharedKernel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
+        "prestashopheaven": {
+            "kind": "runtime",
+            "use-when": "A command, query or domain object says which shops it is about (one shop, a shop group, all shops), or the Domain layer needs a shared value object without depending on PrestaShop.",
+            "keywords": [
+                "shop",
+                "shop-group",
+                "all-shops",
+                "multistore",
+                "value-object",
+                "domain",
+                "shared-kernel",
+                "shop-constraint"
+            ]
+        }
+    }
+}
